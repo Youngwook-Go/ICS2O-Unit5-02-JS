@@ -11,13 +11,35 @@
  */
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Template-PWA/sw.js", {
-    scope: "/ICS2O-Template-PWA/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-02-JS/sw.js", {
+    scope: "/ICS2O-Unit5-02-JS/",
   })
 }
 
-// function description
+// get and compare random number and user number
+// print proper answer for comparison
 
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+// make random number
+const randomNumber = Math.floor(Math.random() * 5) - 2
+
+function update() {
+  // input
+  const userInput = document.getElementById('options').checked
+
+  // process and output
+  if (userInput == randomNumber) {
+    document.getElementById("answer").innerHTML =
+      "Your answer is : " +
+      userInput +
+      "<br>The random number was : " +
+      randomNumber +
+      "<br>You got it!"
+  } else {
+    document.getElementById("answer").innerHTML =
+      "Your answer is : " +
+      userInput +
+      "<br>The random number was : " +
+      randomNumber +
+      "<br>Try again!"
+  }
 }
