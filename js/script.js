@@ -24,7 +24,7 @@ const randomNumber = Math.floor(Math.random() * 5) - 2
 
 function update() {
   // input
-  const userInput = document.getElementById('options').checked
+  const userInput = document.getElementById("options").checked
 
   // process and output
   if (userInput == randomNumber) {
