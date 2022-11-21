@@ -24,11 +24,11 @@ const randomNumber = Math.floor(Math.random() * 5) - 2
 
 function update() {
   // get input numbers
-  const positive2 = document.getElementById('positive2').checked
-  const positive1 = document.getElementById('positive1').checked
-  const neutral0 = document.getElementById('neutral0').checked
-  const negative1 = document.getElementById('negative1').checked
-  const negative2 = document.getElementById('negative2').checked
+  const positive2 = document.getElementById("positive2").checked
+  const positive1 = document.getElementById("positive1").checked
+  const neutral0 = document.getElementById("neutral0").checked
+  const negative1 = document.getElementById("negative1").checked
+  const negative2 = document.getElementById("negative2").checked
 
   // output
   if (positive2 == true && randomNumber == 2) {
@@ -44,5 +44,6 @@ function update() {
   } else {
     document.getElementById("answer").innerHTML = "try again"
   }
-  document.getElementById("number").innerHTML = "Random number = " + randomNumber + "."
+  document.getElementById("number").innerHTML =
+    "Random number = " + randomNumber + "."
 }
