@@ -55,6 +55,7 @@
           >
         </div>
       </header>
+      <!-- main -------------------------------------------------->
       <main class="mdl-layout__content">
         <h3>Pick a number from -2 to +2</h3>
         <label
@@ -65,9 +66,9 @@
             type="radio"
             id="positive2"
             class="mdl-radio__button"
-            name="options"
-            value="1"
-            onclick="update()"
+            name="user-input"
+            value="positive2"
+            onchange="update()"
           />
           <span class="mdl-radio__label">2⠀</span>
         </label>
@@ -79,20 +80,20 @@
             type="radio"
             id="positive1"
             class="mdl-radio__button"
-            name="options"
-            value="1"
-            onclick="update()"
+            name="user-input"
+            value="positive1"
+            onchange="update()"
           />
           <span class="mdl-radio__label">1⠀</span>
         </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="zero">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="neutral0">
           <input
             type="radio"
-            id="zero"
+            id="neutral0"
             class="mdl-radio__button"
-            name="options"
-            value="1"
-            onclick="update()"
+            name="user-input"
+            value="neutral0"
+            onchange="update()"
           />
           <span class="mdl-radio__label">0⠀</span>
         </label>
@@ -104,9 +105,9 @@
             type="radio"
             id="negative1"
             class="mdl-radio__button"
-            name="options"
-            value="1"
-            onclick="update()"
+            name="user-input"
+            value="negative1"
+            onchange="update()"
           />
           <span class="mdl-radio__label">-1⠀</span>
         </label>
@@ -118,13 +119,14 @@
             type="radio"
             id="negative2"
             class="mdl-radio__button"
-            name="options"
-            value="1"
-            onclick="update()"
+            name="user-input"
+            value="negative2"
+            onchange="update()"
           />
           <span class="mdl-radio__label">-2⠀</span>
         </label>
         <hr style="border-top: 2px solid black" />
+        <div id="number"></div>
         <div id="answer"></div>
       </main>
     </div>

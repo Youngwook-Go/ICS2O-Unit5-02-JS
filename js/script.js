@@ -23,23 +23,26 @@ if (navigator.serviceWorker) {
 const randomNumber = Math.floor(Math.random() * 5) - 2
 
 function update() {
-  // input
-  const userInput = document.getElementById("options").checked
+  // get input numbers
+  const positive2 = document.getElementById('positive2').checked
+  const positive1 = document.getElementById('positive1').checked
+  const neutral0 = document.getElementById('neutral0').checked
+  const negative1 = document.getElementById('negative1').checked
+  const negative2 = document.getElementById('negative2').checked
 
-  // process and output
-  if (userInput == randomNumber) {
-    document.getElementById("answer").innerHTML =
-      "Your answer is : " +
-      userInput +
-      "<br>The random number was : " +
-      randomNumber +
-      "<br>You got it!"
+  // output
+  if (positive2 == true && randomNumber == 2) {
+    document.getElementById("answer").innerHTML = "correct"
+  } else if (positive1 == true && randomNumber == 1) {
+    document.getElementById("answer").innerHTML = "correct"
+  } else if (neutral0 == true && randomNumber == 0) {
+    document.getElementById("answer").innerHTML = "correct"
+  } else if (negative1 == true && randomNumber == -1) {
+    document.getElementById("answer").innerHTML = "correct"
+  } else if (negative2 == true && randomNumber == -2) {
+    document.getElementById("answer").innerHTML = "correct"
   } else {
-    document.getElementById("answer").innerHTML =
-      "Your answer is : " +
-      userInput +
-      "<br>The random number was : " +
-      randomNumber +
-      "<br>Try again!"
+    document.getElementById("answer").innerHTML = "try again"
   }
+  document.getElementById("number").innerHTML = "Random number = " + randomNumber + "."
 }
