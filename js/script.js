@@ -21,26 +21,24 @@ if (navigator.serviceWorker) {
 
 function update() {
   console.log("update")
-  const positive = document.getElementById('positive').checked
-  const negative = document.getElementById('negative').checked
-  console.log(positive + " | " + negative )
+  const positive = document.getElementById("positive").checked
+  const negative = document.getElementById("negative").checked
+  console.log(positive + " | " + negative)
 
   if (positive == true) {
     console.log("positive")
     const random = Math.floor(Math.random() * 10) + 1
-    
+
     document.getElementById("number").innerHTML = "the number is : " + random
     document.getElementById("answer").innerHTML = "You choosed positve"
-  } 
-  else if (negative == true) {
+  } else if (negative == true) {
     console.log("negative")
     const random = Math.floor(Math.random() * 10) - 10
-    
+
     document.getElementById("number").innerHTML = "the number is : " + random
     document.getElementById("answer").innerHTML = "You choosed negatve"
   } else {
     console.log("error")
     document.getElementById("answer").innerHTML = "You choosed nothing"
   }
-
 }
