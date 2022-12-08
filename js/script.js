@@ -11,39 +11,36 @@
  */
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-02-JS/sw.js", {
-    scope: "/ICS2O-Unit5-02-JS/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-02-JS-1/sw.js", {
+    scope: "/ICS2O-Unit5-02-JS-1/",
   })
 }
 
 // get and compare random number and user number
 // print proper answer for comparison
 
-// make random number
-const randomNumber = Math.floor(Math.random() * 5) - 2
-
 function update() {
-  // get input numbers
-  const positive2 = document.getElementById("positive2").checked
-  const positive1 = document.getElementById("positive1").checked
-  const neutral0 = document.getElementById("neutral0").checked
-  const negative1 = document.getElementById("negative1").checked
-  const negative2 = document.getElementById("negative2").checked
+  console.log("update")
+  const positive = document.getElementById('positive').checked
+  const negative = document.getElementById('negative').checked
+  console.log(positive + " | " + negative )
 
-  // output
-  if (positive2 == true && randomNumber == 2) {
-    document.getElementById("answer").innerHTML = "correct"
-  } else if (positive1 == true && randomNumber == 1) {
-    document.getElementById("answer").innerHTML = "correct"
-  } else if (neutral0 == true && randomNumber == 0) {
-    document.getElementById("answer").innerHTML = "correct"
-  } else if (negative1 == true && randomNumber == -1) {
-    document.getElementById("answer").innerHTML = "correct"
-  } else if (negative2 == true && randomNumber == -2) {
-    document.getElementById("answer").innerHTML = "correct"
+  if (positive == true) {
+    console.log("positive")
+    const random = Math.floor(Math.random() * 10) + 1
+    
+    document.getElementById("number").innerHTML = "the number is : " + random
+    document.getElementById("answer").innerHTML = "You choosed positve"
+  } 
+  else if (negative == true) {
+    console.log("negative")
+    const random = Math.floor(Math.random() * 10) - 10
+    
+    document.getElementById("number").innerHTML = "the number is : " + random
+    document.getElementById("answer").innerHTML = "You choosed negatve"
   } else {
-    document.getElementById("answer").innerHTML = "try again"
+    console.log("error")
+    document.getElementById("answer").innerHTML = "You choosed nothing"
   }
-  document.getElementById("number").innerHTML =
-    "Random number = " + randomNumber + "."
+
 }
